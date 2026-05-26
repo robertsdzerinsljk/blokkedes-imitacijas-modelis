@@ -1,39 +1,49 @@
 # blokkedes-imitacijas-modelis
 
-Šajā repozitorijā ir ietverts blokķēdes darījumu apstrādes simulācijas modeļa pirmkods, kas izstrādāts bakalaura darba ietvaros.
+Šajā repozitorijā ir pieejams bakalaura darba ietvaros izstrādātais blokķēdes darījumu apstrādes imitācijas modelis.
 
-Simulācijas modeļa mērķis ir analizēt, kā dažādi sistēmas slodzes scenāriji ietekmē blokķēdes darījumu caurlaidspēju, apstiprināšanas laiku, mempool dinamiku un relatīvās resursu izmaksas.
+Modeļa mērķis ir analizēt, kā dažādi slodzes scenāriji ietekmē blokķēdes darījumu caurlaidspēju, darījumu apstiprināšanas laiku, mempool apjoma dinamiku un relatīvo resursu izmaksu rādītāju.
 
-## Darba tēma
+## Bakalaura darba tēma
 
-**Blokķēdes simulācijas modeļa izstrāde darījumu apstrādes veiktspējas un resursu patēriņa analīzei**
+**Blokķēžu imitācijas modeļa izstrāde darījumu apstrādes veiktspējas un resursu patēriņa analīzei**
 
-## Galvenā funkcionalitāte
+## Projekta apraksts
 
-Simulācijas modelis ļauj mainīt šādus parametrus:
+Projekts realizē vienkāršotu blokķēdes darījumu apstrādes imitācijas modeli. Modelī iespējams mainīt darījumu ģenerēšanas intensitāti, bloka izmēru, bloku ģenerēšanas intervālu, simulācijas ilgumu un tīkla aizkaves robežas.
 
-- darījumu ģenerēšanas ātrums;
-- bloka lielums;
-- bloka ģenerēšanas intervāls;
-- simulācijas ilgums;
-- tīkla aizkaves diapazons.
+Izstrādātais modelis paredzēts kontrolētu eksperimentu veikšanai, lai salīdzinātu sistēmas darbību dažādos slodzes apstākļos, neizmantojot reālu blokķēdes tīklu.
 
-Modelis ģenerē šādus izejas rādītājus:
+## Galvenās funkcijas
 
-- darījumu caurlaidspēja;
-- vidējais apstiprināšanas laiks;
-- mempool lieluma dinamika;
-- relatīvās resursu izmaksas rādītājs.
+- zemas, vidējas un augstas slodzes scenāriji;
+- iespēja manuāli mainīt simulācijas parametrus;
+- darījumu ģenerēšana, izmantojot varbūtisku modeli;
+- vienkāršota mempool un bloku veidošanas loģika;
+- tīkla aizkaves modelēšana;
+- darījumu caurlaidspējas, apstiprināšanas laika, mempool apjoma un resursu izmaksu aprēķins;
+- grafiskā lietotāja saskarne simulācijas palaišanai;
+- simulācijas rezultātu eksportēšana CSV formātā;
+- attēlu ģenerēšana bakalaura darba eksperimentālajai daļai.
 
 ## Projekta struktūra
 
 ```
 .
-├── app_main.py
+├── config.py
 ├── core_model.py
-├── simulacija_ui.py
-├── test_app.py
-├── prasības.txt
-├── rezultāti/
+├── simulation.py
+├── gui.py
+├── main.py
+├── visualization.py
+├── requirements.txt
+├── results/
+│   ├── simulation_step_results.csv
+│   └── simulation_summary.csv
+└── figures/
+    ├── 3_1_darijumu_caurlaidspeja_tps.png
+    ├── 3_2_videjais_apstiprinasanas_laiks.png
+    ├── 3_3_mempool_dinamika.png
+    └── 3_4_resursu_izmaksu_raditajs.png
 ├── skaitļi/
 └── README.md
