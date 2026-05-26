@@ -1,0 +1,4 @@
+scenario,duration,tx_rate_mean,block_size,avg_block_time,final_visible_mempool_size,pending_transaction_count,blocks_visible_in_chain,total_confirmed_transactions,throughput_tps,avg_confirmation_time
+low_load,180,1.0,12,6,4,2,28,157,0.872,4.204
+medium_load,180,2.0,12,6,22,0,31,345,1.917,7.759
+high_load,180,4.0,12,6,379,8,31,372,2.067,42.675
